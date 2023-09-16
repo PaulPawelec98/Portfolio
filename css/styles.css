@@ -11,7 +11,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
-  --bs-blue: #1e30f3;
+  --bs-blue: #101442;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
   --bs-pink: #e21e80;
@@ -34,26 +34,26 @@
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: #1e30f3;
-  --bs-secondary: #e21e80;
+  --bs-primary: #1e0e46;
+  --bs-secondary: #493e64;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 30, 48, 243;
-  --bs-secondary-rgb: 226, 30, 128;
-  --bs-success-rgb: 25, 135, 84;
-  --bs-info-rgb: 13, 202, 240;
-  --bs-warning-rgb: 255, 193, 7;
-  --bs-danger-rgb: 220, 53, 69;
-  --bs-light-rgb: 248, 249, 250;
-  --bs-dark-rgb: 33, 37, 41;
-  --bs-white-rgb: 255, 255, 255;
-  --bs-black-rgb: 0, 0, 0;
-  --bs-body-color-rgb: 33, 37, 41;
-  --bs-body-bg-rgb: 255, 255, 255;
+  --bs-primary-rgb: rgba(--bs-primary);
+  --bs-secondary-rgb: rgba(--bs-secondary);
+  --bs-success-rgb: rgba(--bs-success);
+  --bs-info-rgb: rgba(--bs-info);
+  --bs-warning-rgb: rgba(--bs-warning);
+  --bs-danger-rgb: rgba(--bs-danger);
+  --bs-light-rgb: rgba(--bs-light);
+  --bs-dark-rgb: rgba(--bs-dark);
+  --bs-white-rgb: rgba(--bs-white);
+  --bs-black-rgb: rgba(--bs-black);
+  --bs-body-color-rgb: rgba(--bs-body-color);
+  --bs-body-bg-rgb: rgba(--bs-body-bg);
   --bs-font-sans-serif: "Plus Jakarta Sans";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
@@ -62,7 +62,7 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
-  --bs-body-bg: #fff;
+  --bs-body-bg: #d3cdd6;
   --bs-border-width: 1px;
   --bs-border-style: solid;
   --bs-border-color: #dee2e6;
@@ -2845,11 +2845,11 @@ textarea.form-control-lg {
 
 .btn-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #1e30f3;
-  --bs-btn-border-color: #1e30f3;
+  --bs-btn-bg: #1e0e46;
+  --bs-btn-border-color: #000000;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #1a29cf;
-  --bs-btn-hover-border-color: #1826c2;
+  --bs-btn-hover-bg: #2b0b74;
+  --bs-btn-hover-border-color: #000000;
   --bs-btn-focus-shadow-rgb: 64, 79, 245;
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: #1826c2;
@@ -6656,12 +6656,12 @@ textarea.form-control-lg {
 
 .text-bg-primary {
   color: #fff !important;
-  background-color: RGBA(30, 48, 243, var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(var(--bs-primary), var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-secondary {
   color: #000 !important;
-  background-color: RGBA(226, 30, 128, var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(var(--bs-secondary), var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-success {
@@ -7025,6 +7025,10 @@ textarea.form-control-lg {
 
 .d-flex {
   display: flex !important;
+}
+
+.d-grid {
+  display: grid !important;
 }
 
 .d-inline-flex {
@@ -8228,6 +8232,7 @@ textarea.form-control-lg {
   color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
 }
 
+/* This dosen't seem to actually work? white2 uses just the hexcode from bs-white, and that works in most cases */
 .text-white {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
@@ -8241,6 +8246,11 @@ textarea.form-control-lg {
 .text-muted {
   --bs-text-opacity: 1;
   color: #6c757d !important;
+}
+
+.text-white2 {
+  --bs-text-opacity: 1;
+  color: var(--bs-white) !important;
 }
 
 .text-black-50 {
@@ -11556,11 +11566,11 @@ html {
 
 .bg-gradient-primary-to-secondary {
   background: #1e30f3;
-  background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
+  background: linear-gradient(135deg, var(--bs-primary) 0%, var(--bs-secondary) 100%);
 }
 
 .text-gradient {
-  background: -webkit-linear-gradient(315deg, #1e30f3 0%, #e21e80 100%);
+  background: -webkit-linear-gradient(315deg, var(--bs-primary) 0%, var(--bs-secondary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -11611,7 +11621,7 @@ html {
   top: 6.05vw;
 }
 .profile .dots-2 svg {
-  fill: #1e30f3;
+  fill: var(--bs-primary);
 }
 .profile .dots-3 {
   position: absolute;
@@ -11629,7 +11639,7 @@ html {
   bottom: 4vw;
 }
 .profile .dots-4 svg {
-  fill: #1e30f3;
+  fill: var(--bs-primary);
 }
 
 @media (min-width: 576px) {
@@ -11731,4 +11741,119 @@ html {
     width: 1.5vw;
     left: -2vw;
   }
+}
+
+/* Custom Line Spacing Between Bullets */
+
+ul li {
+  padding: 5px 0px;
+}
+
+/* Custom CSS for Slide Shows */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 300px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides1, .mySlides2, .mySlides3, .mySlides4 {
+  background-color: var(--bs-secondary);
+  display: none;
+}
+
+.image-container {
+  display: flex;
+  width: 300px;
+  height: 400px;
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+  object-fit: contain;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: relative;
+  top: 100%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dots1, .dots2, .dots3, .dots4 {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dots1:hover, .dots2:hover, .dots3:hover, .dots4:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+
+/* .fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+  opacity:1;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+} */
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
 }
