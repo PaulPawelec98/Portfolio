@@ -1,15 +1,5 @@
 @charset "UTF-8";
-/*!
-* Start Bootstrap - Personal v1.0.1 (https://startbootstrap.com/template-overviews/personal)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-personal/blob/master/LICENSE)
-*/
-/*!
- * Bootstrap  v5.2.3 (https://getbootstrap.com/)
- * Copyright 2011-2022 The Bootstrap Authors
- * Copyright 2011-2022 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+
 :root {
   --bs-blue: #101442;
   --bs-indigo: #6610f2;
@@ -11749,13 +11739,17 @@ ul li {
   padding: 5px 0px;
 }
 
+/* Custom Line Spacing between text */
+
+.text-height {
+  line-height: 1.75; /* Adjust the value to increase or decrease line spacing */
+}
+
 /* Custom CSS for Slide Shows */
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 300px;
   position: relative;
-  margin: auto;
 }
 
 /* Hide the images by default */
@@ -11768,12 +11762,12 @@ ul li {
   display: flex;
   width: 300px;
   height: 400px;
+  padding: 15px; /* Add padding to push the image in */
 }
 
 .image-container img {
   max-width: 100%;
   max-height: 100%;
-  background-size: cover;
   object-fit: contain;
 }
 
@@ -11856,4 +11850,36 @@ ul li {
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
+}
+
+/* Custom Line Indent */
+
+.indented-text {
+  text-indent: 20px; /* Adjust the value to control the amount of the first-line indent */
+}
+
+/* Custom Anchors and Translations */
+
+.top-anchored {
+  position: absolute;
+  top: 60px;
+  width: 45%;
+  left: 70px;
+}
+
+.bottom-anchored {
+  position: absolute;
+  bottom: 40px;
+}
+
+.middle-anchored {
+  position: absolute;
+  top: 52.5%;
+  left:32%;
+  width: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.move-left {
+  margin-left: 25px; /* Adjust the value to move the container to the right */
 }
