@@ -1,2 +1,3 @@
-# AcademicPortfolio
-collection of school projects and assignments from undergrad and masters.
+# Portfolio
+
+Currently contains my resume and a collection of projects from my masters and undergrad courses.
