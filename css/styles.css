@@ -11880,6 +11880,28 @@ ul li {
   transform: translate(-50%, -50%);
 }
 
+.centered-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .move-left {
   margin-left: 25px; /* Adjust the value to move the container to the right */
+}
+
+/* Custom Sizing for Containers on Contact */
+
+.smaller-container-contact {
+  width: 500px; /* Adjust the percentage to your desired value */
+  height: 50px;
+}
+
+.move-left-2 {
+  margin-left: 70px; /* Adjust the value to move the container to the right */
+}
+
+.move-right-2 {
+  left: 115px; /* Adjust the value to move the container to the right */
 }
