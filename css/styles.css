@@ -24,6 +24,8 @@
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
+  /* --bs-primary: #feb779;
+  --bs-secondary: rgb(244, 81, 0); */
   --bs-primary: #1e0e46;
   --bs-secondary: #493e64;
   --bs-success: #198754;
@@ -52,7 +54,7 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
-  --bs-body-bg: #d3cdd6;
+  --bs-body-bg: #d3cdd6; /* This is the background color!!! original: #d3cdd6 */
   --bs-border-width: 1px;
   --bs-border-style: solid;
   --bs-border-color: #dee2e6;
@@ -11905,3 +11907,20 @@ ul li {
 .move-right-2 {
   left: 115px; /* Adjust the value to move the container to the right */
 }
+
+
+/* Custom Caption for Copyright by NaecoStudio */
+
+.caption {
+  margin-top: 645px; /* Adjust this value to nudge the caption down */
+  /* Additional styling for the caption */
+  float: right
+}
+
+
+
+
+
+
+
+
