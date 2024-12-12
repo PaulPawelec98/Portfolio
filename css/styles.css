@@ -11633,6 +11633,15 @@ html {
 .profile .dots-4 svg {
   fill: var(--bs-primary);
 }
+.profile .dots-5 {
+  position: absolute;
+  width: 3vw;
+  left: -4vw;
+  bottom: 4vw;
+}
+.profile .dots-5 svg {
+  fill: var(--bs-primary);
+}
 
 @media (min-width: 576px) {
   .profile {
@@ -11655,6 +11664,10 @@ html {
     left: 1.5vw;
   }
   .profile .dots-4 {
+    width: 3vw;
+    left: -4vw;
+  }
+  .profile .dots-5 {
     width: 3vw;
     left: -4vw;
   }
@@ -11683,6 +11696,10 @@ html {
     width: 3vw;
     left: -4vw;
   }
+  .profile .dots-5 {
+    width: 3vw;
+    left: -4vw;
+  }
 }
 @media (min-width: 992px) {
   .profile {
@@ -11705,6 +11722,10 @@ html {
     left: 0.75vw;
   }
   .profile .dots-4 {
+    width: 1.5vw;
+    left: -2vw;
+  }
+  .profile .dots-5 {
     width: 1.5vw;
     left: -2vw;
   }
@@ -11733,6 +11754,10 @@ html {
     width: 1.5vw;
     left: -2vw;
   }
+  .profile .dots-5 {
+    width: 1.5vw;
+    left: -2vw;
+  }
 }
 
 /* Custom Line Spacing Between Bullets */
@@ -11755,7 +11780,7 @@ ul li {
 }
 
 /* Hide the images by default */
-.mySlides1, .mySlides2, .mySlides3, .mySlides4 {
+.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5 {
   background-color: var(--bs-secondary);
   display: none;
 }
@@ -11821,7 +11846,7 @@ ul li {
 }
 
 /* The dots/bullets/indicators */
-.dots1, .dots2, .dots3, .dots4 {
+.dots1, .dots2, .dots3, .dots4, .dots5 {
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -11832,7 +11857,7 @@ ul li {
   transition: background-color 0.6s ease;
 }
 
-.active, .dots1:hover, .dots2:hover, .dots3:hover, .dots4:hover {
+.active, .dots1:hover, .dots2:hover, .dots3:hover, .dots4:hover, .dots5:hover{
   background-color: #717171;
 }
 

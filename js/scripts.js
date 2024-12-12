@@ -8,13 +8,14 @@
 
 let slideIndex = [1,1];
 
-let slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4"]
-let dotId = ["dots1", "dots2", "dots3", "dots4"]
+let slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5"]
+let dotId = ["dots1", "dots2", "dots3", "dots4", "dots5"]
 
 showSlides(1, 0);
 showSlides(1, 1);
 showSlides(1, 2);
 showSlides(1, 3);
+showSlides(1, 4);
 
 // Next/previous controls
 function plusSlides(n, no) {
