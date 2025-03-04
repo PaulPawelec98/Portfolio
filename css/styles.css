@@ -11780,7 +11780,7 @@ ul li {
 }
 
 /* Hide the images by default */
-.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5 {
+.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6 {
   background-color: var(--bs-secondary);
   display: none;
 }
@@ -11846,7 +11846,7 @@ ul li {
 }
 
 /* The dots/bullets/indicators */
-.dots1, .dots2, .dots3, .dots4, .dots5 {
+.dots1, .dots2, .dots3, .dots4, .dots5, .dots6 {
   cursor: pointer;
   height: 15px;
   width: 15px;
